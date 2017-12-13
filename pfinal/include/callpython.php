@@ -1,16 +1,20 @@
 <?php
-	
-ini_set('display_errors', 1);
-error_reporting(E_ALL);    
-echo 'hola py<br>';
-$output = null;
-$prende = 'sudo python /var/www/html/Raspberry/pfinal/include/apagado.py';
-//var_dump($prende);
-   exec($prende);
-//phpinfo();
-/*try{
-php_info()}
-catch(ex){
-echo ex;
-};*/
+    $option = $_GET['option'];
+    
+    switch($option) {
+        case '1': 
+            $encendido = 'sudo python /var/www/html/Raspberry/pfinal/include/encendido.py';
+            exec($encendido);
+            echo "prendido";
+            break;
+        case '0':
+            $apagado = 'sudo python /var/www/html/Raspberry/pfinal/include/apagado.py';
+            exec($apagado);
+            echo "apagado";
+            break;
+        default:
+            echo "Opción no valida";
+    }
+
+    
 ?>
