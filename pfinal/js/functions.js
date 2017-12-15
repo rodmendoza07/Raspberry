@@ -25,6 +25,7 @@ $(document).ready(function () {
                 url: 'include/callpython.php',
                 data: {option: 1},
                 contentType: 'application/json; charset=utf-8',
+                async: false,
                 beforeSend: function(){
                     console.log("Prendiendo dispositivo");
                 },
