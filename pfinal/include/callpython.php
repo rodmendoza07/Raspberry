@@ -5,16 +5,14 @@
         case '1': 
             $encendido = 'sudo python /var/www/html/Raspberry/pfinal/include/encendido.py';
             exec($encendido);
-            echo "prendido";
+            echo "Prendido";
             break;
         case '0':
             $apagado = 'sudo python /var/www/html/Raspberry/pfinal/include/apagado.py';
             exec($apagado);
-            echo "apagado";
+            echo "Apagado";
             break;
         default:
             echo "Opción no valida";
     }
-
-    
 ?>
